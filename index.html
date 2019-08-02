@@ -48,8 +48,10 @@
             name: fullname
         });
           
-        analytics.track('track name test', user, function() {
-            window.location.href = "";
+        analytics.track('track name test', {
+            email: "Matt", 
+            name: "Marmstrong",
+            timestamp: "2018-11-16T07:51:38.444Z"
         });
       }
 </script>
