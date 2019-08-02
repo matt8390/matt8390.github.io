@@ -48,20 +48,6 @@
             name: fullname
         });
           
-        analytics.track('TestA', user, {
-            'company_id': 12345,
-            'timestamp': '2018-11-16T07:51:38.444Z'
-        });
-        
-          analytics.track( 'TestB',
-           {
-            'company_id': 543321,
-           },
-           function() {
-            window.location.href = "";
-              );
-          
-          
         analytics.track('track name test', user, function() {
             window.location.href = "";
         });
