@@ -47,6 +47,18 @@
             email: email, 
             name: fullname
         });
+          
+        analytics.track('00346247-f836-4a9d-b286-51cecec8b78f', 'TestA', {
+            'company_id': null,
+            'timestamp': '2018-11-16T07:51:38.444Z'
+        });
+        
+          analytics.track('00346247-f836-4a9d-b286-51cecec8b78f', 'TestB',  {
+            'company_id': null,
+        }
+                         'timestamp': '2018-11-16T07:51:38.444Z');
+          
+          
         analytics.track('track name test', user, function() {
             window.location.href = "";
         });
