@@ -29,7 +29,7 @@
     <br><br>
     <input name="submit" type="submit" value="submit"/>
 </form> 
-   <script type="text/javascript">
+    <script type="text/javascript">
       function identify(e){
         e.preventDefault();
         var form = e.target;
@@ -47,21 +47,9 @@
             email: email, 
             name: fullname
         });
-          
-          
-          analytics.identify('user1234', {
-            email: 'petergibbon@email.com',
-            firstname: 'Peter',
-            lastname: 'Gibbon'
-        );
-          
-          analytics.track("Order Completed", {}, { timestamp: "2015-12-12T19:11:01.249Z" });
-          
-        analytics.track('track name test', {
-            email: "Matt", 
-            name: "Marmstrong",
-            }, {timestamp: "2018-11-16T07:51:38.444Z"
-           });
+        analytics.track('destination submitted', user, function() {
+            window.location.href = "";
+        });
       }
 </script>
 </body> 
