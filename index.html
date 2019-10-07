@@ -52,10 +52,8 @@
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
         });
-      }
-        
-        
-        / Getting the query property-value pairs with the formatQs() call:
+          
+           / Getting the query property-value pairs with the formatQs() call:
 var query_parameters = formatQs();
 
 // Getting the properties only, and not the values
@@ -70,6 +68,10 @@ for (var i = 0; i < properties.length; i++) {
 
 // Now we will have the clean query parameters with only the UTM parameters in the query_parameters object, and we will track the event with name "User Referred"
   analytics.track('User Referred', query_parameters);
+      }
+        
+        
+       
 </script>
 </body> 
 </html>
