@@ -23,6 +23,8 @@
     <textarea cols="81" name="details" required="" rows="10">
     </textarea> 
     <br><br> 
+    URL: <input name="url" required="" size="75" type="text"/> 
+    <br><br>
     Name: <input name="fullname" required="" size="75" type="text"/> 
     <br><br> 
     Email: <input name="email" required="" size="75" type="email"/> 
@@ -51,6 +53,23 @@
             window.location.href = "";
         });
       }
+        
+        
+        / Getting the query property-value pairs with the formatQs() call:
+var query_parameters = formatQs();
+
+// Getting the properties only, and not the values
+var properties = Object.keys(query_parameters);
+
+// Loop through the properties array. If the properties are not UTM parameters, they will be removed from the object query_parameters. The UTM parameters are: utm_source, utm_medium, utm_term, utm_content and utm_campaign.
+for (var i = 0; i < properties.length; i++) {
+    if (!(properties[i] == 'utm_source' || properties[i] == 'utm_medium' || properties[i] == 'utm_term' || properties[i] == 'utm_content' || properties[i] == 'utm_campaign')){
+      delete query_parameters[properties[i]];
+    }
+}
+
+// Now we will have the clean query parameters with only the UTM parameters in the query_parameters object, and we will track the event with name "User Referred"
+  analytics.track('User Referred', query_parameters);
 </script>
 </body> 
 </html>
