@@ -50,8 +50,11 @@
             name: fullname
         });
         analytics.track('destination submitted', user, function() {
-            window.location.href = "";
+            window.location.href = "", ;
         });
+          
+        analytics.track("pageTest", {}, {context: { page: {referrer: "", title: "", url: "" }}});     
+          
 
 
         
