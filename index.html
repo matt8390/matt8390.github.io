@@ -49,16 +49,15 @@
             email: email, 
             name: fullname
         });
+          
+        analytics.track("pageTest", {}, {context: { page: {referrer: null, title: null, url: null }}});    
+          
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
         });
           
-        analytics.track("pageTest", {}, {context: { page: {referrer: "", title: "", url: "" }}});     
-          
-
-
-        
-        
+         
+   
        
 </script>
 </body> 
