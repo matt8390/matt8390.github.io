@@ -4,8 +4,8 @@
     <title>Segment APIs Requent Generator<span id="selection-marker-1" class="redactor-selection-marker"></span></title> 
 </head> 
 <body> 
-<h1>Segment APIs Request Generator</h1> 
-    
+<h1>Segment APIs Request Generator</h1>
+ 
 <div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Dropdown</button>
   <div id="myDropdown" class="dropdown-content">
@@ -14,7 +14,28 @@
     <a href="#">Link 3</a>
   </div>
 </div>
-    
+
+<script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>                                     
     
 <form name="travel" onsubmit="identify(event)">
      Workspace Name:
@@ -35,27 +56,23 @@
     <input name="submit" type="submit" value="submit"/>
 </form> 
    
-  <script type="text/javascript">
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
+<script type="text/javascript">
+  function identify(e){
+    e.preventDefault();
+    var form = e.target;
+    var workspace = form["workspace"].value;
+    var source = form["source"].value;
+    var destination = form["destination"].value;
+    var destCatName = form["destCatName"].value;
+    var sourceCatName = form["sourceCatName"].value;
+    var user = {
+        workspace: workspace, 
+        source: source, 
+        destination: destination, 
+        destCatName: destCatName,
+        sourceCatName: sourceCatName
+  };
+ </script>
 
 </body> 
 </html>
