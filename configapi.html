@@ -5,6 +5,15 @@
 </head> 
 <body> 
 <h1>Segment APIs Request Generator</h1> 
+    
+ <div class="dropdown">
+  <button onclick="dropdown()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
 <form name="travel" onsubmit="identify(event)">
      Workspace Name:
     <input name="workspace" required="" size="81" type="text"/> 
@@ -23,6 +32,26 @@
     <br><br> 
     <input name="submit" type="submit" value="submit"/>
 </form> 
+    
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function dropdown() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
     <script type="text/javascript">
       function identify(e){
         e.preventDefault();
