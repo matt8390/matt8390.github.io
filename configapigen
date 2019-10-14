@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Segment APIs Requent Generator<span id="selection-marker-1" class="redactor-selection-marker"></span></title> 
+</head> 
+<body> 
+<h1>Segment APIs Requent Generator</h1> 
+<p>I am building a directory of the sweetest travel destinations.</p>  
+<form name="travel" onsubmit="identify(event)">
+     Enter the name of your workspace:
+    <input name="workspace" required="" size="81" type="text"/> 
+    <br><br><br> 
+    Enter the relevant source name: 
+    <input name="source" required="" size="81" type="text"/> 
+    <br><br><br> 
+    Enter the relevant destination name:
+    <input name="destination" required="" size="75" type="text"/> 
+    <br><br>
+    Destination Name (From Catalog)
+    <input name="destCatName" required="" size="75" type="text"/> 
+    <br><br> 
+    Source Name (From Catalog)
+    <input name="sourceCatName" required="" size="75" type="text"/> 
+    <br><br> 
+    <input name="submit" type="submit" value="submit"/>
+</form> 
+    <script type="text/javascript">
+      function identify(e){
+        e.preventDefault();
+        var form = e.target;
+        var workspace = form["workspace"].value;
+        var source = form["source"].value;
+        var destination = form["destination"].value;
+        var destCatName = form["destCatName"].value;
+        var sourceCatName = form["sourceCatName"].value;
+        var user = {
+            workspace: workspace, 
+            source: source, 
+            destination: destination, 
+            destCatName: destCatName,
+            sourceCatName: sourceCatName
+        };
+      };
+</script>
+</body> 
+</html>
