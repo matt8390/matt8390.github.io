@@ -8,22 +8,24 @@
                                      
 <form name="travel" onsubmit="identify(event)">
      Workspace Name:
-    <input name="workspace" required="" size="81" type="text"/> 
+    <input name="workspace" size="81" type="text"/> 
     <br><br> 
     Enter the relevant source name: 
-    <input name="source" required="" size="81" type="text"/> 
+    <input name="source" size="81" type="text"/> 
     <br><br>
     Enter the relevant destination name:
-    <input name="destination" required="" size="75" type="text"/> 
+    <input name="destination" size="75" type="text"/> 
     <br><br>
     Destination Name (From Catalog)
-    <input name="destCatName" required="" size="75" type="text"/> 
+    <input name="destCatName" size="75" type="text"/> 
     <br><br> 
     Source Name (From Catalog)
-    <input name="sourceCatName" required="" size="75" type="text"/> 
+    <input name="sourceCatName" size="75" type="text"/> 
     <br><br> 
     <input name="submit" type="submit" value="submit"/>
 </form> 
+    
+    
    
 <script type="text/javascript">
   function identify(e){
@@ -41,6 +43,9 @@
         sourceCatName: sourceCatName
   };
  </script>
+    
+    <p>https://platform.segmentapis.com/v1beta/workspaces/<var>workspace</var>/sources/<var>source</var>/destinations/<var>destination</var></p>
+    
 
 </body> 
 </html>
