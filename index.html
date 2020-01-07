@@ -64,6 +64,14 @@
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
         });
+
+        try {
+            if(1 = 2) throw "is Empty";
+            
+          }
+          catch(err) {
+            message.innerHTML = "Input " + err;
+          }
           
          
       };
