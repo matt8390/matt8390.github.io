@@ -9,6 +9,11 @@
   }}();
 </script>
      -->
+  
+  <script src="https://browser.sentry-cdn.com/5.10.2/bundle.min.js" integrity="sha384-ssBfXiBvlVC7bdA/VX03S88B5MwXQWdnpJRbUYFPgswlOBwETwTp6F3SMUNpo9M9" crossorigin="anonymous">
+  </script>
+  
+  Sentry.init({ dsn: 'https://daf6980a0ff243aa9406db1edd7bdedb@sentry.io/25415' });
     
 
     <script>
@@ -65,13 +70,7 @@
             window.location.href = "";
         });
 
-        try {
-            if(1 = 2) throw "is Empty";
-            
-          }
-          catch(err) {
-            message.innerHTML = "Input " + err;
-          }
+        myUndefinedFunction();
           
          
       };
