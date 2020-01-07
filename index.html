@@ -13,7 +13,7 @@
   <script src="https://browser.sentry-cdn.com/5.10.2/bundle.min.js" integrity="sha384-ssBfXiBvlVC7bdA/VX03S88B5MwXQWdnpJRbUYFPgswlOBwETwTp6F3SMUNpo9M9" crossorigin="anonymous">
   </script>
   
-  Sentry.init({ dsn: 'https://daf6980a0ff243aa9406db1edd7bdedb@sentry.io/25415' });
+
     
 
     <script>
@@ -46,6 +46,9 @@
     <input name="submit" type="submit" value="submit"/>
 </form> 
     <script type="text/javascript">
+
+  Sentry.init({ dsn: 'https://daf6980a0ff243aa9406db1edd7bdedb@sentry.io/25415' });
+      
       function identify(e){
         e.preventDefault();
         var form = e.target;
